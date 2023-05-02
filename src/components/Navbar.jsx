@@ -7,9 +7,9 @@ import cart from "../images/noun-shopping-bag-5679827.png"
 function Navbar() {
     return(
        <div className="navbar">
-            <NavLink to="/homepage"><img src="#" alt="logo" className="logo"/> Jouna</NavLink>
+            <NavLink to="/"><img src="#" alt="logo" className="logo"/> Jouna</NavLink>
             <div className="navbar-wrds">
-            <NavLink to="/homepage" className="navbar-words">Home</NavLink>
+            <NavLink to="/" className="navbar-words">Home</NavLink>
             <NavLink to="/collection" className="navbar-words">Collection</NavLink>
             <NavLink to="/aboutUs" className="navbar-words">About Us</NavLink>
             </div>

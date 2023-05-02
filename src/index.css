@@ -35,7 +35,7 @@
 }
 .basket-img {
   height: 23px;
-
+  
 }
 
 /*Home Page*/
@@ -71,3 +71,15 @@
   font-weight: 500;
   font-size: 6rem;
 } */
+.breadcrumb-not-active {
+  color: #cccccc;
+  }
+  
+  .breadcrumb-active {
+  color: #000000;
+  }
+  
+  .breadcrumb-arrow {
+  margin-left: 10px;
+  margin-right: 10px;
+  }
