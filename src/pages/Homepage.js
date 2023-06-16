@@ -1,7 +1,9 @@
-import "../index.css"
+import "../index.scss"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Armchair from "../images/Background-transparent.png"
+//import Contact from "../components/Contact"
+import { Link } from "react-router-dom"
 
 
 function Homepage () {
@@ -12,16 +14,14 @@ function Homepage () {
             <div className="header">
 
                 <div className="header-text" >
-                    <h1>Home of <span>JOUNA</span></h1>
-                    <p>Aliquam sit amet neque tempor, 
-                    efficitur lorem id, <br/>
-                    rhoncus velit.In hac habitasse platea dictumst. 
-                    <br/>
-                    Nunc at interdum tellus. Proin maximus
-                    <br/>
-                    nibh a fermentum semper.
+                    <h1>Home <br/> of <br/> <div className="word-jouna"> JOUNA</div></h1>
+                    <p>We offer a curated collection of contemporary furniture 
+                        pieces that effortlessly blend form and function. From sleek  
+                        minimalist designs to bold statement pieces, selection 
+                        caters to discerning individuals seeking high-quality, stylish 
+                        furniture <br/>for their homes or offices.
                     </p>
-                    <button className="btn">Check our Collection</button>
+                   <Link to="/collection"> <button className="btn">Check our Collection</button></Link>
                 </div>
                 <div>
                 <img src={Armchair} alt="chair" className="armchair"/>

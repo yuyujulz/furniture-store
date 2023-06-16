@@ -3,7 +3,7 @@ import Homepage from "./pages/Homepage"
 import Cart from "./pages/Cart"
 import AboutUs from "./pages/AboutUs"
 import Collection from "./pages/Collection"
-import "./index.css"
+import "./index.scss"
 
 function App() {
   return (
