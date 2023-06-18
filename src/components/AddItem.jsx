@@ -1,9 +1,8 @@
 /* eslint-disable */
 import "../index.scss"
-import Popup from 'reactjs-popup'
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import service from "../api/service";
+
 
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5005";
 
@@ -16,11 +15,10 @@ export default function AddItem(props) {
     const [stock, setStock] = useState(1);
     const [imageUrl, setImageUrl] = useState("");
     const [category, setCategory] = useState("");
-    const { itemId } = useParams();
   /* eslint-enable */ 
-
+  const closeHandler = () => { props.onCancel() }
   
-    const handleFileUpload = (e) => {
+    function handleFileUpload(e){
       const uploadData = new FormData();
       uploadData.append("imageUrl", e.target.files[0]);
       service
@@ -31,7 +29,7 @@ export default function AddItem(props) {
         .catch((err) => console.log("Error while uploading the file: ", err));
     };
   
-    const handleSubmit = (e) => {
+    function handleSubmit(e){
       e.preventDefault();
   
       service
@@ -52,29 +50,19 @@ export default function AddItem(props) {
           setStock(0);
           setImageUrl("");
           setCategory("");
-        //   alert("Item been added!");
-        //   navigate(`/collection`);
+          alert("Item been added!");
+          closeHandler()
         })
         .catch((err) => console.log("Error while adding the new item: ", err));
     };
 
+    
+
+    // const closeHandler = () => { props.onCancel() }
+
    
     return(
         <>
-           {/*   <div className="button-group">
-       <Link to={`/collection`}>
-          <button className="btn">Back</button>
-        </Link> 
-            </div>*/}
-
-            
-<Popup trigger={
-            <button
-                className="btn">
-                +
-            </button>} 
-        modal
-        nested>
 
       <div className="addItemDiv">
         <form onSubmit={handleSubmit} className="addItemForm">
@@ -150,15 +138,15 @@ export default function AddItem(props) {
               value={description}
             />
 <br />
-          <button type="submit" className="btn">
+          <button type="submit" className="btn" >
             ADD
           </button>
-          <button type="submit" className="btn" >
-            CLOSE&DISCARD
+          <button className="btn" onClick={closeHandler} >
+            CLOSE
           </button>
         </form>
       </div>
-      </Popup>
+  
         </>
     )
 }

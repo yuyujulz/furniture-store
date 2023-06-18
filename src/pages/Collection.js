@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import AddItem from "../components/AddItem"
+import Backdrop from "../components/Backdrop"
 
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -11,6 +12,10 @@ const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5005";
 
 function Collection(props) {
     const [items, setItems] = useState([])
+    const [showModal, setShowModal] = useState(false);
+  
+
+   
   
     useEffect(() => {
         axios
@@ -22,6 +27,13 @@ function Collection(props) {
         .catch((err) => console.log("There is an error", err));
     }, []);
 
+    function openAddItemForm(){
+        setShowModal(true)
+      }
+
+    function closeAddItemForm(){
+        setShowModal(false)
+    }
 
     return(
         <>
@@ -31,14 +43,17 @@ function Collection(props) {
                 <div>
                     
                     <h1 className="h1-collection">Collection</h1>
-
-                {/* <Breadcrumbs /> */} <AddItem/>
-                
+                    <div>
+                        <button className="btn addBtn" onClick={openAddItemForm}>+</button>
+                        {showModal && <AddItem onCancel={closeAddItemForm}/>}
+                        {showModal && <Backdrop onCancel={closeAddItemForm}/>}
+                    </div>
 
                     <div className="allCollection">
                         {items.map((item) => {
                             return (
                                 <div className="card">
+                                    <div className="card-content">
                                     <Link to={`/item/${item._id}`}>
                                         <img src={item.imageUrl} alt="furniture-img" />
                                         <p>{item.title}</p>
@@ -46,6 +61,7 @@ function Collection(props) {
                                         <br/>
                                         <button className="btn">Item details</button>
                                     </Link>
+                                    </div>
                                 </div>
                             );
                         })}
