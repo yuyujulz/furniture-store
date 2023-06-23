@@ -31,9 +31,10 @@ const createItem = (newItem) => {
     .catch(errorHandler);
 };
 
-
-export default {
+const exportDefault =  {
   getItems,
   uploadImage,
   createItem
 };
+
+export default exportDefault;
