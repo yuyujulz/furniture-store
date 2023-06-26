@@ -15,6 +15,7 @@ export default function AddItem(props) {
     const [stock, setStock] = useState(1);
     const [imageUrl, setImageUrl] = useState("");
     const [category, setCategory] = useState("");
+    const [color, setColor] = useState("");
   /* eslint-enable */ 
   const closeHandler = () => { props.onCancel() }
   
@@ -41,6 +42,7 @@ export default function AddItem(props) {
           stock,
           imageUrl,
           category,
+          color
         })
         .then((res) => {
           setTitle("");
@@ -50,6 +52,7 @@ export default function AddItem(props) {
           setStock(0);
           setImageUrl("");
           setCategory("");
+          setColor("")
           alert("Item been added!");
           closeHandler()
         })
@@ -106,6 +109,7 @@ export default function AddItem(props) {
               value={stock}
             />
           </div>
+          <div className="selectForm">
 
           <label>Category</label>
             <select
@@ -120,6 +124,23 @@ export default function AddItem(props) {
               <option value="chair">Chair</option>
             </select>
 
+            <label>Color</label>
+            <select
+              name="color"
+              className="color"
+              onChange={(e) => setColor(e.target.value)}
+              value={color}
+            >
+              <option value="black">Black</option>
+              <option value="white">White</option>
+              <option value="yellow">Yellow</option>
+              <option value="brown">Brown</option>
+              <option value="blue">Blue</option>
+              <option value="pattern">Pattern</option>
+              <option value="offWhite">Off White</option>
+              <option value="gray">gray</option>
+            </select>
+</div>
            {/* ADD ITEM IMAGE */}
            
           <label>Upload an Image</label>

@@ -4,25 +4,32 @@
 
 
 * {
-  background-color: rgb(242,244,247);
   color: rgb(39,43,52);
   font-family: sans-serif;
+}
+body{
+  background-image: url("./images/gradient-buttom.png");
+  background-attachment: fixed;
 }
 
 .btn {
   border: none;
-  background-color: white;
+  background-color:  rgb(255, 255, 255, 0.5);
   padding: 10px 30px;
   border-radius: 50px;
-  box-shadow: 0px 1px 6px rgb(39,43,52, 0.4);
+  box-shadow: 0px 1px 6px rgba(24, 181, 56, 0.459);
+  border: 1px solid white;
   margin: 20px auto;
   margin-right: 15px;
+  font-family: "larken", sans-serif;
+  transform: skewY(-4deg);
 }
 
 .btn:hover {
-  transform: scale(1.06) perspective(1.5px);
+  transform: scale(1) perspective(1.5px) skewY(3deg);
   transition-timing-function: ease-in-out;
-  transition-duration: 150ms;
+  transition-duration: 200ms;
+  background-color:  rgba(246, 246, 246, 0.9);
 }
 
 /*Navbar*/
@@ -186,8 +193,9 @@ position: absolute;
     align-items: center;
     z-index: 10;
     position: fixed;
-    top: 5vh;
+    top: 6vh;
     left: calc(50% - 15rem);
+    height: 80%;
 
       label{
         width: 100%;
@@ -219,6 +227,10 @@ position: absolute;
         height: 5rem;
         margin-bottom: 10px;
       }
+      .selectForm{
+        display: flex;
+        justify-content: center;
+      }
   }
 
   .backdrop {
@@ -235,26 +247,33 @@ position: absolute;
   padding-top: 5vh;
   position:inherit;
   left: calc(1.5%);
+  margin: 0 40px;
 
     .card{
-    display: inline-flex;
-    width: 40vh;
-    height: 40vh;
-    margin: 10px;
-    border: 1px solid rgb(58, 57, 57, 0.3);
-    border-radius: 20px;
-    padding: 15px;
-    padding-top: 25px;
-    box-sizing:content-box;
-
+    display:inline-flex;
+    width: 30vh;
+    // height: 30vh;
+    // margin: 10px ;
+    // border: 1px solid rgb(255, 255, 255);
+    // border-radius: 20px;
+    // padding: 10px;
+    // padding-top: 15px;
+    // box-sizing:content-box;
+    // background-color: rgba(226, 90, 0, 0.1);  
+    // backdrop-filter: blur(5px);
+    // box-shadow: 0px 1px 16px rgb(255, 255, 255, 0.9);
+    
       img{
-        display:flex;
-        justify-content: center;
-        width: 80%;
-        height: 20vh;
+      
+        max-width: 30vw;
+        height: 30vh;
+        // border-radius: 15px;
         overflow:hidden;
-        border: 1px solid rgb(58, 57, 57, 0.3);
-        
+        box-sizing: border-box;
+        margin-left: 5px;
+      }
+      .infoOnCard{
+        text-decoration: none;
       }
       
 }
@@ -283,22 +302,53 @@ position: absolute;
   .aboutUs-txt{
     padding-top: 15vh;
     position:inherit;
+    // background-image: url("./images/gradient-buttom.png");
   }
 
 
   // user login sign up
 
   .loginSignup{
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 10px;
+    padding-top: 30vh;
+    position:inherit;
+    margin-left: 9%;
+    
 
     .loginForm{
+      display: block;
       width: 30rem;
       padding-left: 40px;
       padding-top: 2rem;
       padding-bottom: 1rem;
       align-items: center;
+      
   }
+    input{
+      width: 70%;
+      height: 2rem;
+      border-radius: 10px;
+      border-style: none;
+      background-color: rgb(249, 251, 255);
+      box-sizing: border-box;
+      display: block;
+    }
+    label{
+      width: 100%;
+      display:block;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      color: rgb(39,43,52, 0.5);
+      font-size: small;
+    }
+
+    .signUp{
+      border-left: 3px solid rgb(249, 251, 255);
+    }
 
 }
 

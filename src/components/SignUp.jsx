@@ -5,7 +5,7 @@ export default function SignUp(){
         <div >
             
 
-                <form action="submit" className="loginForm">
+                <form action="submit" className="loginForm signUp" >
                     <label>EMAIL</label>
                         <input
                         className="email"
