@@ -7,8 +7,6 @@ function AboutUs() {
 
             <Navbar/>
                 <div className="aboutUs-txt">
-
-                    <h1 className="h1-collection ">About Us</h1>
                     <p className="aboutUs-p">
                         Welcome to JOUNA! <br/>
 

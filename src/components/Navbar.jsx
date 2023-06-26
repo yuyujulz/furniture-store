@@ -14,7 +14,7 @@ function Navbar() {
             <NavLink to="/aboutUs" className="navbar-words">About Us</NavLink>
             </div>
             <div className="navbar-imgs">
-            <NavLink to="/user" className="user"> <img src={user} alt="user" className="user"/></NavLink>
+            <NavLink to="/signuplogin" className="user"> <img src={user} alt="user" className="user"/></NavLink>
             <NavLink  to="/cart" className="basket"> <img src={cart} alt="basket" className="basket-img"/></NavLink>
             </div>
        </div>

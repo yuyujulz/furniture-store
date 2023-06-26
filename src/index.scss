@@ -30,7 +30,9 @@
 .navbar{
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  padding: 20px;
+  position: fixed;
+  width: 100vw;
   
 }
 
@@ -66,7 +68,7 @@
 }
 .basket-img {
   height: 23px;
-  
+  margin-right: 50px;
 }
 
 /* Footer */
@@ -75,6 +77,10 @@
 display: flex;
 justify-content: space-between;
 margin-top: 3rem;
+position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; 
 
   div{
     display: inline-block;
@@ -129,7 +135,8 @@ margin-top: 3rem;
   justify-content: center;
   margin-left: 27%;
   width: 50%;
-  margin-top: 35px;
+  padding-top: 15vh;
+  position:inherit;
 
     h1 {
       font-size: 5rem;
@@ -169,17 +176,6 @@ margin-top: 3rem;
 
  /* collection page */
 
-  .h1-collection {
-    display: flex;
-    justify-content: center; 
-    align-items: flex-end; 
-    line-height: 3rem;
-    font-family: "larken", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    //margin-left: 2rem;
-    //transform:rotate(-90deg)
-  }
   .addItemForm {
     width: 30rem;
     border: 2px solid white;
@@ -236,7 +232,8 @@ margin-top: 3rem;
   }
 
 .allCollection{
-  position:absolute;
+  padding-top: 5vh;
+  position:inherit;
   left: calc(1.5%);
 
     .card{
@@ -263,7 +260,7 @@ margin-top: 3rem;
 }
 }
 .addBtn{
-  margin-top:-50px;
+  margin-top:15vh;
   margin-left: 25px;
 }
 
@@ -276,13 +273,33 @@ margin-top: 3rem;
     color: rgb(39,43,52,0.7);
     font-size: 0.9rem;
     line-height: 1.5em;
-    margin-top: 3rem;
+    margin-top: 5rem;
     margin-left: 10rem;
+    
   }
   .aboutUs {
     height:100vh;
   }
+  .aboutUs-txt{
+    padding-top: 15vh;
+    position:inherit;
+  }
 
 
+  // user login sign up
+
+  .loginSignup{
+    display: inline-block;
+    margin: 10px;
+
+    .loginForm{
+      width: 30rem;
+      padding-left: 40px;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      align-items: center;
+  }
+
+}
 
  

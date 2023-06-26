@@ -27,6 +27,7 @@ function Collection(props) {
         .catch((err) => console.log("There is an error", err));
     }, []);
 
+
     function openAddItemForm(){
         setShowModal(true)
       }
@@ -42,7 +43,6 @@ function Collection(props) {
             
                 <div>
                     
-                    <h1 className="h1-collection">Collection</h1>
                     <div>
                         <button className="btn addBtn" onClick={openAddItemForm}>+</button>
                         {showModal && <AddItem onCancel={closeAddItemForm}/>}

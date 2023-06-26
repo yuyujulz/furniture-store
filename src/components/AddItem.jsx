@@ -138,10 +138,10 @@ export default function AddItem(props) {
               value={description}
             />
 <br />
-          <button type="submit" className="btn" >
+          <button type="submit" className="btn"onCancel={closeHandler}>
             ADD
           </button>
-          <button className="btn" onClick={closeHandler} >
+          <button className="btn" onCancel={closeHandler} >
             CLOSE
           </button>
         </form>
