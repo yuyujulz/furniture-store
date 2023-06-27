@@ -6,7 +6,7 @@ function Cart(){
         <div>
               <Navbar/>
                 <div>
-                   this cart
+                   this is cart
                 </div>
             <Footer/>
             
