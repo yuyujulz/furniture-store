@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import SignUp from "../components/SignUp"
-import LogIn from "../components/LogIn"
+import LogIn from "../components/LogInForm"
 import "../index.scss"
 
 function Login(){
